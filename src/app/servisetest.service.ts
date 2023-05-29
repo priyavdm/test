@@ -13,6 +13,6 @@ export class ServisetestService {
    return this.http.get(this.url+ '/getall');
   }
   insertdata(){
-    // return this.http.post(this.url)
+    // return this.http.post(this.url+ '/insert')
   }
 }
