@@ -1,4 +1,28 @@
 <p>myapp works!</p>
+<h1>input field</h1>
+<div>
+  username
+  <input type="text"  name="name" [(ngModel)]="name" >
+</div>
+<div>
+  age
+  <input type="text"  name="age" [(ngModel)]="age">
+</div>
+<div>
+  email
+  <input type="text" name="email" [(ngModel)]="email">
+</div>
+<div>
+  gender
+  <input type="text"  name="gender" [(ngModel)]="gender">
+</div>
+<div>
+  <button (click)="insertdata(name,age,email,gender)">ADD</button>
+</div>
+
+<div>
+<h1>Table</h1>
+
 <table>
     <thead>
       <tr>
@@ -17,7 +41,9 @@
         <td>{{e.age}}</td>
         <td>{{e.email}}</td>
         <td>{{e.gender}}</td>
-        <!-- <button (click)=""></button> -->
+        <button (click)="delete(e.id)">Delete</button>
       </tr>
     </tbody>
   </table>
+</div>
+

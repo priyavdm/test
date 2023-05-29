@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MyappComponent } from './myapp/myapp.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ServisetestService } from "./servisetest.service";
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ServisetestService } from "./servisetest.service";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],

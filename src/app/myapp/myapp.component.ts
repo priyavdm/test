@@ -8,6 +8,10 @@ import { ServisetestService } from "../servisetest.service";
 })
 export class MyappComponent implements OnInit{
   getalldata:any;
+  name:any='';
+  age:any;
+  email:any='';
+  gender:any='';
   constructor(public s:ServisetestService){}
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
@@ -23,4 +27,21 @@ export class MyappComponent implements OnInit{
     
   })
   }
+  insertdata(username:string,age:any,email:string,gender:string){
+    this.s.insertdata(username,age,email,gender).subscribe((data)=>{
+    console.log(data);
+      
+      this.getAlls()
+  })
+  this.name=null;
+  this.age=null;
+  this.email=null;
+  this.gender=null;
+  }
+  delete(id:number){
+    this.s.delete(id).subscribe((data)=>{
+      this.getAlls()
+    })
+  }
+
 }
