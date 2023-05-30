@@ -19,6 +19,9 @@
 <div>
   <button (click)="insertdata(name,age,email,gender)">ADD</button>
 </div>
+<div>
+  <button (click)="update()">update</button>
+</div>
 
 <div>
 <h1>Table</h1>
@@ -42,6 +45,7 @@
         <td>{{e.email}}</td>
         <td>{{e.gender}}</td>
         <button (click)="delete(e.id)">Delete</button>
+        <button (click)="edit(e.id)">Edit</button>
       </tr>
     </tbody>
   </table>

@@ -13,11 +13,17 @@ export class ServisetestService {
    return this.http.get(this.url+ '/getall');
   }
 
-  insertdata(username:string,age:any,email:string,gender:string){
-    return this.http.post(this.url+ '/insert',{username:username,age:age,email:email,gender:gender})  
+  insertdata(name:string,age:any,email:string,gender:string){
+    return this.http.post(this.url+ '/insert',{username:name,age:age,email:email,gender:gender})  
   }
   delete(id:number){
     return this.http.put(this.url+ '/delete',{id:id})
+  }
+  edit(id:number){
+    return this.http.get(this.url+ '/edit/'+id)
+  }
+  update(updatesbody:any){
+    return this.http.put(this.url+ '/update',updatesbody)
   }
 
 }
